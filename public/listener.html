@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body style="margin:0;background:white;height:100vh;">
+    <script>
+      const audio = new Audio("/stream");
+      audio.preload = "auto";
+      function unlock() {
+        audio.play().catch(() => {});
+      }
+      document.addEventListener("click", unlock, { once: true });
+      document.addEventListener("touchstart", unlock, { once: true });
+    </script>
+  </body>
+</html>
