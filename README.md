@@ -34,8 +34,12 @@ curl -fsSL https://raw.githubusercontent.com/soundtag1/soundtag/main/install/ins
 
 ### Windows (PowerShell)
 
+RUN COMMANDS 1 BY 1!!!
+
 ```powershell
-irm https://raw.githubusercontent.com/soundtag1/soundtag/main/install/install.ps1 | iex
+cd $env:TEMP
+irm https://raw.githubusercontent.com/soundtag1/soundtag/main/install/install.ps1 -OutFile install.ps1
+powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
 Alternatively, download and double‑click `install/install.bat`.
